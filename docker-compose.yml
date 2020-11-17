@@ -1,0 +1,27 @@
+version: "3"
+services:
+  mpi_head:
+      build: .
+      image: dockeropenmpi_mpi_head:latest
+      container_name: head
+      ports: 
+        - "22"
+      links: 
+        - mpi_node1
+        - mpi_node2
+      volumes:
+        - ./mpi-hello:/mpi-hello
+
+  mpi_node1:
+      build: .
+      image: dockeropenmpi_mpi_head:latest
+      container_name: node1
+      volumes:
+        - ./mpi-hello:/mpi-hello
+
+  mpi_node2:
+      build: .
+      image: dockeropenmpi_mpi_head:latest
+      container_name: node2
+      volumes:
+        - ./mpi-hello:/mpi-hello
