@@ -1,4 +1,4 @@
-## docker.openmpi
+## one-host-mpi-cluster
 
 Travis CI: [![Build Status](https://travis-ci.org/ocramz/docker.openmpi.svg?branch=master)](https://travis-ci.org/ocramz/docker.openmpi)
 
@@ -10,9 +10,8 @@ so that multiple containers can be linked together and used via `mpirun`.
 
 ## MPI Container Cluster with `docker-compose`
 
-While containers can in principle be started manually via `docker run`, we suggest that your use 
-[Docker Compose](https://docs.docker.com/compose/), a simple command-line tool 
-to define and run multi-container applications. We provide a sample `docker-compose.yml` file in the repository:
+Simple command-line tool to define and run multi-container applications. 
+We provide a sample `docker-compose.yml` file in the repository:
 
 ```
 version: "3"
@@ -69,7 +68,8 @@ Breaking the above command down:
 2. run on 2 MPI ranks
 3. Command to run
 
-
-## Source
-
-https://github.com/dispel4py/ by O. Weidner and R. Filgueira 
+You can use makefile:
+```
+$> make build
+$> make run
+```
