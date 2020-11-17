@@ -1,8 +1,8 @@
 ## one-host-mpi-cluster
 
-Travis CI: [![Build Status](https://travis-ci.org/ocramz/docker.openmpi.svg?branch=master)](https://travis-ci.org/ocramz/docker.openmpi)
+Using one-host-mpi-cluster you can create and explore multi-machine mpi-clusters on one host.
 
-Used the code from this repository, you can build a Docker container that provides 
+You can build a Docker container that provides 
 the OpenMPI runtime and tools along with various supporting libaries.
 The container also runs an OpenSSH server
 so that multiple containers can be linked together and used via `mpirun`.
